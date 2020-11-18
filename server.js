@@ -47,7 +47,7 @@ app.get('/api/v0/pictures', (req, res) => {
 // JSON endpoint entering id
 app.get('/api/v0/pictures/:id', (req, res) => {
     let pictureId = req.params.id;
-    pictures.findOne({ id: shoeId }, (err, data) => {
+    pictures.findOne({ id: pictureId }, (err, data) => {
         if (err || data === null) {
             res.send('error');
             console.log(err);
